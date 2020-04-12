@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
         <title>Flask App</title>
-        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}"
+        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}"        
+        
     </head>
 <body>
-    <header>
-        <div class = "container">
-            <h1 class ="logo">Sam's web app</h1>
-            <strong><nav>
-                <u1 class="menu">
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('about') }}">About</a></li>
-                </u1>
-            </nav>
-            </strong>
-        </div>
-    </header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>                
+          </ul>
+        </div>  
+      </nav>
+          
     <div class="container">
         {%block content%}
-        {%endblock%}
-    </div>
+        {%endblock%}               
+    </div>    
+    <footer>
+        <div class="container">
+            <h6>Quick links</h6>
+            <ul class="list-unstyled">
+                <li><a href= '#'>Home</a></li>
+                <li><a href= '#'>About</a></li>
+                <li><a href= '#'>Contact</a></li>
+            </ul>
+            <h6>Follow me</h6>
+            <ul class="list-unstyled">
+                <li><a href= '#'>Facebook</a></li>
+                <li><a href= '#'>Instagram</a></li>                
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
